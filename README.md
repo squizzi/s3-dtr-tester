@@ -11,3 +11,10 @@ docker run --rm -it squizzi/s3test -a <AWS Access Key> \
     -e <AWS Endpoint URL> \
     -b <AWS Bucket>
 ```
+
+The expected functional output should look like:
+
+```
+Successfully PutObject
+Cleaning up...
+```
