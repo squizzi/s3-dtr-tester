@@ -70,7 +70,11 @@ func main() {
 		S3ForcePathStyle: aws.Bool(true),
 		HTTPClient:       client,
 	}
-	newSession := session.New(s3Config)
+	newSession, err := session.NewSession(s3Config)
+	if err != nil {
+		fmt.Printf("Failed to establish a new session with aws config: %s", err)
+		return
+	}
 
 	s3Client := s3.New(newSession)
 
