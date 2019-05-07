@@ -55,6 +55,7 @@ func main() {
 	// Configure InsecureSkipVerify to ignore TLS Cert errors
 	tr := &http.Transport{
 		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
+		Proxy:           http.ProxyFromEnvironment,
 	}
 	client := &http.Client{Transport: tr}
 
