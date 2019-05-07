@@ -27,7 +27,7 @@
 
 [[constraint]]
   name = "github.com/aws/aws-sdk-go"
-  revision = "c6fc52983ea2375810aa38ddb5370e9cdf611716"
+  revision = "951ad7ef064805f1c666d02dee8dfe9363e0f014"
 
 [prune]
   go-tests = true

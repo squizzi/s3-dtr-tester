@@ -2,9 +2,11 @@ package main
 
 import (
 	"crypto/rand"
+	"crypto/tls"
 	"flag"
 	"fmt"
 	"io"
+	"net/http"
 	"net/url"
 	"strings"
 
@@ -50,6 +52,12 @@ func main() {
 		}
 	}
 
+	// Configure InsecureSkipVerify to ignore TLS Cert errors
+	tr := &http.Transport{
+		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
+	}
+	client := &http.Client{Transport: tr}
+
 	// Create a session
 	bucket := aws.String(*awsConfig.Bucket)
 	key := aws.String("testobject")
@@ -60,6 +68,7 @@ func main() {
 		Region:           aws.String(*awsConfig.RegionID),
 		DisableSSL:       aws.Bool(true),
 		S3ForcePathStyle: aws.Bool(true),
+		HTTPClient:       client,
 	}
 	newSession := session.New(s3Config)
 
