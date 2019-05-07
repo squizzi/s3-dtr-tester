@@ -2,7 +2,7 @@
 
 
 [[projects]]
-  digest = "1:203122739f3ab74a3114981c977c23f052d41c1355ae95bea2ff0837bd1e27f6"
+  digest = "1:122c59b57d6b24fc52329f0229cfa46a3ae0f0e442af4328e1a4a51c29049cde"
   name = "github.com/aws/aws-sdk-go"
   packages = [
     "aws",
@@ -14,41 +14,41 @@
     "aws/credentials",
     "aws/credentials/ec2rolecreds",
     "aws/credentials/endpointcreds",
-    "aws/credentials/processcreds",
     "aws/credentials/stscreds",
-    "aws/csm",
     "aws/defaults",
     "aws/ec2metadata",
     "aws/endpoints",
     "aws/request",
     "aws/session",
     "aws/signer/v4",
-    "internal/ini",
-    "internal/s3err",
-    "internal/sdkio",
-    "internal/sdkrand",
-    "internal/sdkuri",
-    "internal/shareddefaults",
     "private/protocol",
-    "private/protocol/eventstream",
-    "private/protocol/eventstream/eventstreamapi",
     "private/protocol/query",
     "private/protocol/query/queryutil",
     "private/protocol/rest",
     "private/protocol/restxml",
     "private/protocol/xml/xmlutil",
+    "private/waiter",
     "service/s3",
     "service/sts",
   ]
   pruneopts = "UT"
-  revision = "951ad7ef064805f1c666d02dee8dfe9363e0f014"
+  revision = "c6fc52983ea2375810aa38ddb5370e9cdf611716"
 
 [[projects]]
-  digest = "1:bb81097a5b62634f3e9fec1014657855610c82d19b9a40c17612e32651e35dca"
+  digest = "1:d37c61a335d13bc49b3f90e9e13c8686e4548839b69c58549e727afb2245c454"
+  name = "github.com/go-ini/ini"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "c85607071cf08ca1adaf48319cd1aa322e81d8c1"
+  version = "v1.42.0"
+
+[[projects]]
+  digest = "1:b87714e57a511d88f307aba7d5b63522da12bed0a050889c81272fc50f71100e"
   name = "github.com/jmespath/go-jmespath"
   packages = ["."]
   pruneopts = "UT"
-  revision = "c2b33e84"
+  revision = "3433f3ea46d9f8019119e7dd41274e112a2359a9"
+  version = "0.2.2"
 
 [solve-meta]
   analyzer-name = "dep"
